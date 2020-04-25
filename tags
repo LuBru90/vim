@@ -668,6 +668,7 @@ Delete_operator	.\plugged\txtfmt\ftplugin\txtfmt.vim	/^fu! s:Delete_operator(mod
 Delete_region	.\plugged\txtfmt\ftplugin\txtfmt.vim	/^fu! s:Delete_region(rgn, mode)$/;"	f
 Delete_region_text	.\plugged\txtfmt\ftplugin\txtfmt.vim	/^fu! s:Delete_region_text(pos_beg, pos_end, inc)$/;"	f
 Delete_visual	.\plugged\txtfmt\ftplugin\txtfmt.vim	/^fu! s:Delete_visual()$/;"	f
+Derivation of Calculations	.\undos\C%%Users%Brunn%OneDrive%HochschuleM¸nchen%MASTER%1_Semester%MultyBody%Ausarbeitung%test.tex	/^/;"	s
 Derivation of the Equations	.\undos\C%%Users%Brunn%vimfiles%test.tex	/^\\section{}5Å_–/;"	s
 Direction	.\plugged\vim-orgmode\ftplugin\orgmode\liborgmode\base.py	/^class Direction():$/;"	c
 Direction	.\plugged\vim-orgmode\ftplugin\orgmode\liborgmode\documents.py	/^from orgmode.liborgmode.base import MultiPurposeList, flatten_list, Direction, get_domobj_range$/;"	i
@@ -2718,6 +2719,7 @@ add_snippet	.\plugged\ultisnips\pythonx\UltiSnips\snippet\source\snippet_diction
 add_snippet	.\plugged\ultisnips\pythonx\UltiSnips\snippet_manager.py	/^    def add_snippet($/;"	m	class:SnippetManager
 akey	.\plugged\ultisnips\test\test_UltiSnipFunc.py	/^    akey = "'te{}st√¢'".format('"')$/;"	v	class:VerifyVimDict2
 akey	.\plugged\ultisnips\test\test_UltiSnipFunc.py	/^    akey = '"te{}st√¢"'.format("'")$/;"	v	class:VerifyVimDict3
+align	.\undos\C%%Users%Brunn%OneDrive%HochschuleM¸nchen%MASTER%1_Semester%MultyBody%Ausarbeitung%test.tex	/^/;"	s
 align_h	.\plugged\vim-boxdraw\python\boxdraw.py	/^def align_h(line, width, where):$/;"	f
 align_v	.\plugged\vim-boxdraw\python\boxdraw.py	/^def align_v(lines, height, where, empty):$/;"	f
 all_checkboxes	.\plugged\vim-orgmode\ftplugin\orgmode\liborgmode\headings.py	/^	def all_checkboxes(self):$/;"	m	class:Heading
@@ -3668,16 +3670,11 @@ g:SuperTabUndoBreak	.\plugged\supertab\plugin\supertab.vim	/^    let g:SuperTabU
 g:Tlist_Ctags_Cmd	.\plugged\vim-orgmode\ftplugin\org.vim	/^	let g:Tlist_Ctags_Cmd .= ' --options=' . expand('<sfile>:p:h') . '\/org.cnf '$/;"	v
 g:Txtfmt_Version	.\plugged\txtfmt\plugin\txtfmt.vim	/^let g:Txtfmt_Version = "4.0a"$/;"	v
 g:UltiSnipsEditSplit	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsEditSplit = 'normal'$/;"	v
-g:UltiSnipsEditSplit	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
 g:UltiSnipsEnableSnipMate	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsEnableSnipMate = 1$/;"	v
 g:UltiSnipsExpandTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsExpandTrigger = "<tab>"$/;"	v
-g:UltiSnipsExpandTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
 g:UltiSnipsJumpBackwardTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsJumpBackwardTrigger = "<c-k>"$/;"	v
-g:UltiSnipsJumpBackwardTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsJumpBackwardTrigger="1"$/;"	v
 g:UltiSnipsJumpForwardTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsJumpForwardTrigger = "<c-j>"$/;"	v
-g:UltiSnipsJumpForwardTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsJumpForwardTrigger="2"$/;"	v
 g:UltiSnipsListSnippets	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsListSnippets = "<c-tab>"$/;"	v
-g:UltiSnipsListSnippets	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsListSnippets="9"$/;"	v
 g:UltiSnipsMappingsToIgnore	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsMappingsToIgnore = []$/;"	v
 g:UltiSnipsRemoveSelectModeMappings	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsRemoveSelectModeMappings = 1$/;"	v
 g:UltiSnipsSnippetDirectories	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsSnippetDirectories = [ "UltiSnips" ]$/;"	v
@@ -5759,6 +5756,7 @@ section 4	.\plugged\vimtex\test\tests\test-motions\test-section-motions.tex	/^\\
 section 5	.\plugged\vimtex\test\tests\test-motions\test-section-motions.tex	/^\\chapter{section 5}$/;"	c
 section 6	.\plugged\vimtex\test\tests\test-motions\test-section-motions.tex	/^\\chapter{section 6}$/;"	c
 section 7	.\plugged\vimtex\test\tests\test-motions\test-section-motions.tex	/^\\chapter{section 7}$/;"	c
+sectionPP	.\undos\C%%Users%Brunn%OneDrive%HochschuleM¸nchen%MASTER%1_Semester%MultyBody%Ausarbeitung%test.tex	/^/;"	s
 select	.\plugged\ultisnips\pythonx\UltiSnips\vim_helper.py	/^def select(start, end):$/;"	f
 select	.\plugged\vimtex\autoload\vimtex\text_obj\cmdtargets.vim	/^function! s:select(count) " {{{1$/;"	f
 select	.\plugged\vimtex\autoload\vimtex\text_obj\envtargets.vim	/^function! s:select(count) " {{{1$/;"	f
@@ -5818,6 +5816,7 @@ set_todo_state	.\plugged\vim-orgmode\ftplugin\orgmode\plugins\Todo.py	/^	def set
 set_vim_buffer	.\plugged\vim-orgmode\tests\test_libcheckbox.py	/^def set_vim_buffer(buf=None, cursor=(2, 0), bufnr=0):$/;"	f
 set_vim_buffer	.\plugged\vim-orgmode\tests\test_plugin_edit_checkbox.py	/^def set_vim_buffer(buf=None, cursor=(2, 0), bufnr=0):$/;"	f
 set_visual_selection	.\plugged\vim-orgmode\tests\test_plugin_navigator.py	/^def set_visual_selection(visualmode, line_start, line_end, col_start=1,$/;"	f
+setbox0	.\undos\C%%Users%Brunn%OneDrive%HochschuleM¸nchen%MASTER%1_Semester%MultyBody%Ausarbeitung%test.tex	/^/;"	s
 setlocale	.\plugged\vim-orgmode\tests\test_liborgdate_utf8.py	/^	def setlocale(self, name):$/;"	m	class:OrgDateUtf8TestCase
 settings	.\plugged\vim-orgmode\ftplugin\orgmode\_vim.py	/^import orgmode.settings$/;"	i
 settings	.\plugged\vim-orgmode\ftplugin\orgmode\plugins\Agenda.py	/^from orgmode import settings$/;"	i
@@ -7007,7 +7006,6 @@ vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\text_objects\snippet_instance.p
 vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\text_objects\viml_code.py	/^from UltiSnips import vim_helper$/;"	i
 vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\vim_state.py	/^from UltiSnips import vim_helper$/;"	i
 vim_snippets#Filename	.\plugged\vim-snippets\autoload\vim_snippets.vim	/^fun! vim_snippets#Filename(...)$/;"	f
-vimrc	.\plugged\vimtex\test\issues\1595\test.vim	/^augroup vimrc$/;"	a
 vimtex#cache#clear	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#clear(name, local) abort " {{{1$/;"	f
 vimtex#cache#close	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#close(name) abort " {{{1$/;"	f
 vimtex#cache#open	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#open(name, ...) abort " {{{1$/;"	f

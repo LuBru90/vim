@@ -6,7 +6,7 @@
     map <F2> k:put=strftime(\"%d.%m.%y %H:%M\")<enter>J
     set virtualedit=insert
     inoremap jj <Esc>
-    noremap > <<<Esc>
+        noremap > <<<Esc>
     noremap < >><Esc>
     vnoremap J :m '>+1<CR>gv=gv
     vnoremap K :m '<-2<CR>gv=gv
@@ -15,9 +15,13 @@
     nnoremap <leader>s :w<enter>:VimtexCompileSS<enter>
     map <leader>v :set virtualedit=all<enter>
     map <leader>i :set virtualedit=insert<enter>
+    map <leader>b +o
+    map <leader>B +O
+    map <leader>A +<
+    map <leader>a +-
 
 call plug#begin()
-
+                                                                   
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'lervag/vimtex'
     Plug 'gyim/vim-boxdraw'
