@@ -3670,11 +3670,16 @@ g:SuperTabUndoBreak	.\plugged\supertab\plugin\supertab.vim	/^    let g:SuperTabU
 g:Tlist_Ctags_Cmd	.\plugged\vim-orgmode\ftplugin\org.vim	/^	let g:Tlist_Ctags_Cmd .= ' --options=' . expand('<sfile>:p:h') . '\/org.cnf '$/;"	v
 g:Txtfmt_Version	.\plugged\txtfmt\plugin\txtfmt.vim	/^let g:Txtfmt_Version = "4.0a"$/;"	v
 g:UltiSnipsEditSplit	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsEditSplit = 'normal'$/;"	v
+g:UltiSnipsEditSplit	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsEditSplit="vertical"$/;"	v
 g:UltiSnipsEnableSnipMate	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsEnableSnipMate = 1$/;"	v
 g:UltiSnipsExpandTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsExpandTrigger = "<tab>"$/;"	v
+g:UltiSnipsExpandTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
 g:UltiSnipsJumpBackwardTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsJumpBackwardTrigger = "<c-k>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsJumpBackwardTrigger="1"$/;"	v
 g:UltiSnipsJumpForwardTrigger	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsJumpForwardTrigger = "<c-j>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsJumpForwardTrigger="2"$/;"	v
 g:UltiSnipsListSnippets	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsListSnippets = "<c-tab>"$/;"	v
+g:UltiSnipsListSnippets	.\plugged\ultisnips\docker\docker_vimrc.vim	/^let g:UltiSnipsListSnippets="9"$/;"	v
 g:UltiSnipsMappingsToIgnore	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsMappingsToIgnore = []$/;"	v
 g:UltiSnipsRemoveSelectModeMappings	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsRemoveSelectModeMappings = 1$/;"	v
 g:UltiSnipsSnippetDirectories	.\plugged\ultisnips\autoload\UltiSnips\map_keys.vim	/^    let g:UltiSnipsSnippetDirectories = [ "UltiSnips" ]$/;"	v
@@ -7006,6 +7011,7 @@ vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\text_objects\snippet_instance.p
 vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\text_objects\viml_code.py	/^from UltiSnips import vim_helper$/;"	i
 vim_helper	.\plugged\ultisnips\pythonx\UltiSnips\vim_state.py	/^from UltiSnips import vim_helper$/;"	i
 vim_snippets#Filename	.\plugged\vim-snippets\autoload\vim_snippets.vim	/^fun! vim_snippets#Filename(...)$/;"	f
+vimrc	.\plugged\vimtex\test\issues\1595\test.vim	/^augroup vimrc$/;"	a
 vimtex#cache#clear	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#clear(name, local) abort " {{{1$/;"	f
 vimtex#cache#close	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#close(name) abort " {{{1$/;"	f
 vimtex#cache#open	.\plugged\vimtex\autoload\vimtex\cache.vim	/^function! vimtex#cache#open(name, ...) abort " {{{1$/;"	f

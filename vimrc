@@ -21,7 +21,7 @@
     map <leader>a +-
 
 call plug#begin()
-                                                                   
+
     Plug 'ludovicchabant/vim-gutentags'
     Plug 'lervag/vimtex'
     Plug 'gyim/vim-boxdraw'
