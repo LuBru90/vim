@@ -1,88 +1,95 @@
-"""""" lubru VIM-Config
+"" lukas brunner VIM-Config
 "" 24.04.20 22:39
 
+
 """" Editing
-    "map <F2> :r! date /t "+\%Y-\%m-\%d \%H:\%M:\%S"<enter>
-    map <F2> k:put=strftime(\"%d.%m.%y %H:%M\")<enter>J
-    set virtualedit=insert
+    let mapleader=" "
+
     inoremap jj <Esc>
-        noremap > <<<Esc>
+    noremap <c-9> :cnext<CR>
+    noremap <c-8> :cprev<CR>
+
+    noremap > <<<Esc>
     noremap < >><Esc>
+
     vnoremap J :m '>+1<CR>gv=gv
     vnoremap K :m '<-2<CR>gv=gv
 
-    let mapleader=" "
-    nnoremap <leader>s :w<enter>:VimtexCompileSS<enter>
-    map <leader>v :set virtualedit=all<enter>
-    map <leader>i :set virtualedit=insert<enter>
-    map <leader>b +o
-    map <leader>B +O
-    map <leader>A +<
-    map <leader>a +-
+    vnoremap < >gv
+    vnoremap > <gv
+
+    nnoremap ,f :FZF<cr>
+    set backspace=indent,eol,start
+    set history=1000
+    set wildignore+=.pyc,.swp
 
 call plug#begin()
 
     Plug 'ludovicchabant/vim-gutentags'
-    Plug 'lervag/vimtex'
-    Plug 'gyim/vim-boxdraw'
-    Plug 'tpope/vim-speeddating'
     Plug 'mbbill/undotree'
-    Plug 'tpope/vim-surround'
-
-    Plug 'ervandew/supertab'
-    let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-    let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
-    let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
-
-    " Snippets "
-    Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
-    ""let g:UltiSnipsJumpBackwardTrigger="<leader><tab>"
+    Plug 'tpope/vim-fugitive'
+    Plug 'junegunn/fzf'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'sillybun/vim-repl'
 
 call plug#end()
 
+"""" REPL
+    let g:repl_position = 3
+    let g:sendtorepl_invoke_key = ",r"
+    let g:repl_cursor_down = 0
+    let g:repl_program = {'python': ['ipython'],'default': ['bash']}
+    let g:repl_ipython_version = '7.22'
+    nnoremap ,a :REPLToggle<Cr>
+    nnoremap ,b :REPLSendSession<Cr>
+
 """" General
-    ""set encoding=utf-8
     filetype indent plugin on
     set nocompatible
     set autochdir
+    set scrolloff=1
+    set sidescrolloff=5
+    set linebreak
+    set hidden
+    set autoread
 
 """" Extra files
     set nowritebackup
     set noswapfile
     set nobackup
-    set undodir=C:\Users\Brunn\vimfiles\undos
     set undofile
+    set undodir=C:\Users\lbrunner\vimfiles\undos
 
 """" Visuals
     syntax on
-    set number
+    set number relativenumber
     color industry
-    highlight Comment ctermfg=gray
-    highlight Visual cterm=reverse
+    highlight Visual ctermfg=black ctermbg=white
+    highlight MatchParen cterm=none ctermfg=red ctermbg=black
+    highlight Search cterm=NONE ctermfg=black ctermbg=lightgreen
+    highlight Comment ctermfg=red
+    highlight Conditional ctermfg=yellow
+    highlight Function ctermfg=yellow
+    highlight Constant ctermfg=blue
+
     set hlsearch
     set incsearch
     set ignorecase
-    
-    " Buggy?"
-    " .txt highlighting"
-    " Header "
-    au BufEnter *.txt 1match Identifier /^\*\*\* .*/ "*** Bla"
-    " Section "
-    au BufEnter *.txt 2match Define /^\* .*/         "* Bla"
-    " SubSection"
-    ""au BufEnter *.txt 3match Constant /. \*\* .*/    " ** Bla"
+    set wrap!
+    nnoremap <expr> n 'Nn'[v:searchforward]
+    nnoremap <expr> N 'nN'[v:searchforward]
+    nnoremap n nzz
+    nnoremap N Nzz
+
 
 "" Statusbar
     " show path and date 
-    set laststatus=2
-    set statusline=\ %r%F\ \ %=%{strftime('%c')[:-4]}\ 
-    let timer = timer_start(60000, 'UpdateStatusBar',{'repeat':-1})
-    function! UpdateStatusBar(timer)
-        execute 'let &ro = &ro'
-    endfunction
+    ""set laststatus=2
+    ""set statusline=\ %r%F\ \ %=%{strftime('%c')[:-4]}\ 
+    ""let timer = timer_start(60000, 'UpdateStatusBar',{'repeat':-1})
+    ""function! UpdateStatusBar(timer)
+    ""    execute 'let &ro = &ro'
+    ""endfunction
 
 "" Tabs
     set tabstop=4
@@ -94,49 +101,52 @@ call plug#end()
     set smartindent
 
 "" Change window size
+    map ê <c-e>
+    map ë <c-y>
+
     map è 3<c-w>>
     map ì 3<c-w><
-    map ê 3<c-w>-
-    map ë 3<c-w>+
+    "map ê 3<c-w>-
+    "map ë 3<c-w>+
 
 "" Move between windows
-    map <c-l> <c-w>l
-    map <c-h> <c-w>h
-    map <c-j> <c-w>j
-    map <c-k> <c-w>k
+    "map <c-l> <c-w>l
+    "map <c-h> <c-w>h
+    "map <c-j> <c-w>j
+    "map <c-k> <c-w>k
 
 "" Autocomplete
-    inoremap " ""<esc>i
-    inoremap [ []<esc>i
-    inoremap { {}<esc>i
-    ""inoremap { {<Enter>}<esc>O
+    ""inoremap " ""<esc>i
+    ""inoremap [ []<esc>i
+    ""inoremap { {}<esc>i
 
 """" Commands
-    ""command! T !ctags -R
-    ""set tags=tags;
-
     command! MD !start cmd
-    map <c-s> :w %<Enter>
 
 "" Go to definition
-    map T :!ctags -R<enter>
-    map <leader>j <C-]>
-    map <leader>k <C-t>
+    nnoremap F <C-]>zz
+    nnoremap B <C-t>zz
 
 """" Copy Pasta
-    vnoremap <leader>c "+y   
-    nnoremap <leader>p "+p   
+    "vnoremap ,c "+y
+    nnoremap ,v "+p
 
-"""""" Nice to know
-    "" Pipe to vim
-    " :r ! ipconfig | findstr IP
-    " :redraw!
-    
-    " "my yank to m-register
-    " "mp copy from m-register
+"""" Tabs
+    noremap ,w :tabnew%<enter>
 
-"""" Windows commands
-    "" findstr string2find fileName
+    map ,1 1gt
+    map ,2 2gt
+    map ,3 3gt
+    map ,4 4gt
 
+"""" Gutter
+    set signcolumn=yes
+    highlight clear SignColumn
 
+    "let g:gitgutter_git_executable = 'C:\Users\lbrunner\AppData\Local\Programs\Git\bin\git.exe'
+    set updatetime=500
 
+    noremap ,d :GitGutterLineHighlightsToggle<cr>
+    noremap ( :GitGutterPrevHunk<cr>zz
+    noremap ) :GitGutterNextHunk<cr>zz
+    noremap ,s :GitGutterPreviewHunk<cr>
